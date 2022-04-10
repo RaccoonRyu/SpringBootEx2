@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
  * @created 2022-04-10
  */
 @Data
+// toBuilder = true는 빌더 패턴으로 생성된 객체의 일부 값을 변경한 새 객체를 생성 가능케 함
 @Builder(toBuilder = true)
 public class SampleDTO {
 
