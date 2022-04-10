@@ -23,7 +23,7 @@ Thymeleaf와 스프링 MVC를 사용하는 스프링부트 예제입니다.
 ### IDE 자동완성 대소문자 무시
 - Intellij auto complete 대소문자 상관없이 동작 설정
     - File > Settings > Editor > General > Code Completion > Match case 체크해제
-    -
+
 ### IDE 인코딩설정
 - Help > Edit Custom VM Options > -Dfile.encoding=UTF-8 추가 후 저장 / 재실행
 - File > Settings > Editor > File Encodings > Global, Project Encoding 전부 UTF-8 설정
