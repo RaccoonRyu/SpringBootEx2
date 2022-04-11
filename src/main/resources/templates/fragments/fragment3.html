@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fragment 3</title> <!-- 다른 html 파일에서 사용할 조각모음 html 3 -->
+</head>
+<body>
+    <div th:fragment="target(first, second)">
+        <!-- 파라미터(first, second)를 받는 th:fragment 선언 -->
+        <style>
+            .c1 {
+                background-color:blue;
+            }
+            .c2 {
+                background-color:yellow;
+            }
+        </style>
+
+        <div class="c1">
+            <th:block th:replace = "${first}"></th:block>
+        </div>
+        <div class="c2">
+            <th:block th:replace = "${second}"></th:block>
+        </div>
+        <!-- 내부적인 th:block으로 파라미터를 표현 -->
+    </div>
+
+</body>
+</html>

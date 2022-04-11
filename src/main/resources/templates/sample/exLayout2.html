@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>exLayout 2</title> <!-- 조각모음 html을 가져와 사용할 html 2 -->
+</head>
+<body>
+
+    <th:block th:replace="~{/fragments/fragment3 :: target(~{this::#ulFirst},
+                ~{this::#ulSecond} )}"></th:block>
+    <!-- this는 현재 페이지를 의미. fragment3.html에 파라미터(#ul~)를 주입한다. -->
+
+    <ul id="ulFirst">
+        <li>AAA</li>
+        <li>BBB</li>
+        <li>CCC</li>
+    </ul>
+
+    <ul id="ulSecond">
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+    </ul>
+</body>
+</html>
