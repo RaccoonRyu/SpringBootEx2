@@ -16,5 +16,12 @@
             <a th:href="@{/sample/exView(sno=${dto.sno})}">[[${dto}]]</a> <!-- 파라미터 추가를 위해 키:값 형태 추가 -->
         </li>
     </ul>
+
+    <ul>
+        <li th:each="dto : ${list}">
+            [[${dto.sno}]] --- [[${#temporals.format(dto.regTime, 'yyyy/MM/dd')}]]
+            <!-- 화면에서는 LocalDateTime을 temporals객체 이용하여 format()으로 처리 -->
+        </li>
+    </ul>
 </body>
 </html>
