@@ -57,5 +57,12 @@
             <!-- th:if 대신 삼항연산자를 사용하여 제어문 처리가 가능 3. CSS의 클래스 지정 작업 -->
         </li>
     </ul>
+
+    <ul>
+        <th:block th:each="dto : ${list}">
+            <li th:text="${dto.sno % 5 == 0}? ${dto.sno} : ${dto.first}"></li>
+            <!-- 별도의 html 태그가 필요 없는 th:block -->
+        </th:block>
+    </ul>
 </body>
 </html>

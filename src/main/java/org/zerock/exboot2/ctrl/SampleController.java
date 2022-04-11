@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.zerock.exboot2.dto.SampleDTO;
 
 import java.time.LocalDateTime;
@@ -44,4 +45,28 @@ public class SampleController {
 
         model.addAttribute("list", list);
     }
+
+    @GetMapping("/exInline")
+    public String exInline(RedirectAttributes redirectAttributes){
+        log.info("exInline..............");
+
+        SampleDTO dto = SampleDTO.builder()
+                .sno(100L)
+                .first("First : 100")
+                .last("Last : 100")
+                .regTime(LocalDateTime.now())
+                .build();
+        
+        // RedirectAttributes를 이용하여 result와 dto라는 이름의 데이터를 심어 전달
+        redirectAttributes.addFlashAttribute("result", "success");
+        redirectAttributes.addFlashAttribute("dto", dto);
+
+        return "redirect:/sample/ex3";
+    }
+
+    @GetMapping("/ex3")
+    public void getEx3(){
+        log.info("ex3..............");
+    }
+
 }

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>EX 3</title> <!-- thymeleaf 동작을 위한 웹 페이지 샘플 3 -->
+</head>
+<body>
+    <h1 th:text="${result}"></h1>
+    <h1 th:text="${dto}"></h1>
+
+    <script th:inline="javascript">
+        var msg = [[${result}]];
+        var dtp = [[${dto}]];
+    </script>
+</body>
+</html>
