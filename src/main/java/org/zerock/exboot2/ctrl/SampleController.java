@@ -30,7 +30,7 @@ public class SampleController {
         log.info("ex1..............."); // 컨트롤러 동작을 확인하기 위한 로깅
     }
 
-    @GetMapping("/ex2")
+    @GetMapping({"/ex2", "/exLink"})
     public void getEx2Model(Model model) {
         List<SampleDTO> list = IntStream.rangeClosed(1, 20).asLongStream().
                 mapToObj(i -> {

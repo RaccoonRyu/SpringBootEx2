@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>EX Link</title> <!-- thymeleaf 동작을 위한 웹 페이지 샘플(링크) -->
+</head>
+<body>
+    <ul>
+        <li th:each="dto : ${list}">
+            <a th:href="@{/sample/exView}">[[${dto}]]</a> <!-- thymeleaf의 링크는 @{}사용 -->
+        </li>
+    </ul>
+
+    <ul>
+        <li th:each="dto : ${list}">
+            <a th:href="@{/sample/exView(sno=${dto.sno})}">[[${dto}]]</a> <!-- 파라미터 추가를 위해 키:값 형태 추가 -->
+        </li>
+    </ul>
+</body>
+</html>
