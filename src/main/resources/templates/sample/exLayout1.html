@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>exLayout 1</title> <!-- 조각모음 html을 가져와 사용할 html -->
+</head>
+<body>
+
+    <h1>Fragment Test</h1>
+
+    <h1>Layout 1 - 1</h1>
+    <div th:replace="~{/fragments/fragment1 :: part1}"></div> <!-- th:replace는 기존의 내용 완전히 대체 -->
+
+    <h1>Layout 1 - 2</h1>
+    <div th:insert="~{/fragments/fragment1 :: part2}"></div> <!-- th:insert는 기존 내용의 바깥 태그는 유지하며 추가 -->
+
+    <h1>Layout 1 - 3</h1>
+    <th:block th:replace="~{/fragments/fragment1 :: part3}"></th:block>
+</body>
+</html>

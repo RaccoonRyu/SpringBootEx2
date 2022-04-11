@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fragment 1</title> <!-- 다른 html 파일에서 사용할 조각모음 html -->
+</head>
+<body>
+    <div th:fragment="part1"> <!-- th:fragment속성을 사용하여 html 일부 태그들을 조각처럼 나눔 -->
+        <h2>Part 1</h2>
+    </div>
+
+    <div th:fragment="part2">
+        <h2>Part 2</h2>
+    </div>
+
+    <div th:fragment="part3">
+        <h2>Part 3</h2>
+    </div>
+</body>
+</html>
