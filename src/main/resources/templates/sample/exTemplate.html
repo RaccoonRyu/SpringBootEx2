@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{/layout/layout1 :: setContent(~{this::content})}">
+    <th:block th:fragment="content">
+        <h1>exTemplate Page</h1>
+    </th:block>
+</th:block>
+<!-- 현재 page의 content부분을 layout1에 전달 -->
+<head>
+    <meta charset="UTF-8">
+    <title>EX TEMPLATE</title> <!-- 레이아웃 템플릿 예제의 실제 화면 -->
+</head>
+<body>
+
+</body>
+</html>
